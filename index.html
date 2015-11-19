@@ -125,6 +125,35 @@ var skybox = new THREE.Mesh(geometry, material);
 scene.add(skybox);
 
 
+// // Being SkyBox for images, etc. 
+
+// // Load the cube textures.
+//   var prefix = 'img/';
+//   var urls = ['px.jpeg', 'nx.jpeg', 'py.jpeg', 'ny.jpeg', 'pz.jpeg', 'nz.jpeg'];
+//   for (var i = 0; i < urls.length; i++) {
+//     urls[i] = prefix + urls[i];
+//   }
+//   var cubemap = THREE.ImageUtils.loadTextureCube(urls);
+//   cubemap.format = THREE.RGBFormat;
+
+//   // Initialize the shader.
+//   var shader = THREE.ShaderLib['cube'];
+//   shader.uniforms['tCube'].value = cubemap
+
+//   var material = new THREE.ShaderMaterial({
+//     fragmentShader: shader.fragmentShader,
+//     vertexShader: shader.vertexShader,
+//     uniforms: shader.uniforms,
+//     depthWrite: false,
+//     side: THREE.BackSide
+//   });
+
+//   // Build the skybox Mesh.
+//   var skybox = new THREE.Mesh(new THREE.CubeGeometry(1000, 1000, 1000), material);
+//   // Add it to the scene
+//   this.scene.add(skybox);
+//   return skybox;
+
 // Create a VR manager helper to enter and exit VR mode.
 var manager = new WebVRManager(renderer, effect, {hideButton: false});
 
